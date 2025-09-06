@@ -1,0 +1,456 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+ }
+ .container{
+    width: 60%;
+    margin: 0 auto;
+ }
+ body{
+    font-family: var(--f1);
+ }
+ 
+
+
+
+ :root{
+    --c1:rgba(9, 33, 67, 1);
+    --c2:rgb(244,165,28);
+    --f1: 'Poppins', sans-serif;
+ }
+
+ /* ================== Header ==================== */
+ header{
+    background-color: var(--c1);
+    padding: 25px 0px;
+ }
+ header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ header .left {
+    width: 18%;
+}
+header .left h4 {
+   color: #fff;
+   font-size: 18px;
+}
+ header .right{
+    width: 80%;
+ }
+ header .right form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ header .right form .dropdown{
+    position: relative;
+    
+
+
+ }
+ 
+ header .right form .dropdown ul {
+    width: 170px;
+    background-color: #fff;
+    list-style-type: none;
+    position: absolute;
+    left: 0px;
+    transition: 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    bottom: -150px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+}
+header .right form .dropdown:hover ul{
+    visibility: visible;
+    opacity: 1;
+    bottom: -135px;
+
+
+
+}
+header .right form .dropdown ul li{
+    padding: 10px;
+    
+}
+header .right form .dropdown ul li a{
+    text-decoration: none;
+    color: #111;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 500;
+}
+header .right form input {
+   width: 78%;
+   padding: 15px;
+   border: none;
+   border-radius: 20px 0px 0px 20px;
+   font-size: 14px;
+   font-weight: 600;
+   font-size: 15px;
+}
+header .right form .dropdown {
+   background-color: #fff;
+   width: 19%;
+   padding: 1.1% 0px;
+   border-left: 1px solid #ccc;
+   border-right: 1px solid #ccc;
+   display: flex;
+   justify-content: center;
+   height: 47px;
+   z-index: 999;
+}
+header .right form .dropdown p {
+   font-size: 14px;
+   margin-top: 3px;
+}
+header .right form button {
+   width: 40px;
+   height: 47px;
+   border: none;
+   background: var(--c2);
+   border-radius: 0px 20px 20px 0px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+header .right form button i{
+     font-size: 18px;
+    transition: 0.3s;
+
+}
+header .right form button:hover{
+    background-color: yellowgreen;
+   
+}
+header .right form button:hover i{
+   color: #fff;
+}
+
+
+
+/* ==================== Nav ========================= */
+nav .fa-times{
+   display: none;
+}
+nav .fa-bars{
+   display: none;
+}
+nav .container{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+nav .left  ul{
+   display: flex;
+   list-style-type: none;
+}
+nav .left  ul li{
+   padding: 10px 10px;
+}
+nav .left  ul li a{
+   text-decoration: none;
+   font-size: 15px;
+   color: #111;
+   font-weight: 500;
+   transition: .3s;
+   text-transform: uppercase;
+
+}
+nav .left  ul li a#first {
+   color: var(--c2);
+   text-shadow: 1px 1px #0000004d;
+}
+nav .left  ul li:hover a{
+   color: var(--c2);
+   text-shadow: 1px 1px #0000004d;
+
+}
+nav .right i{
+   font-size: 24px;
+   color:rgb(11, 73, 136);
+}
+nav{
+   border-bottom: 1px solid #ddd;
+}
+ 
+
+/* ======================== Banner ========================= */
+section.banner_part{
+   margin-top: 30px;
+}
+section.banner_part .banner{
+   height: 520px;
+} 
+section.banner_part .banner img{
+   width: 100%;
+   height: 100%;
+}
+
+/* ======================== Product Part ========================= */
+
+section.product_part{
+  margin-top: 50px;
+   
+}
+section.product_part h3{
+   text-align: center;
+   font-size: 30px;
+   margin-bottom: 15px;
+}
+section.product_part hr{
+   margin-bottom: 30px;
+}
+section.product_part .product {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    
+}
+section.product_part .product .p {
+   width: 24%;
+   position: relative;
+   padding: 15px 15px 16px;
+   border-radius: 5px;
+   transition: 0.3s;
+   transform: scale(0.9);
+}
+section.product_part .product .p:hover {
+   box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.2);
+   transform: scale(1);
+}
+section.product_part .product .p .discount {
+   width: 42px;
+   height: 22px;
+   background: var(--c2);
+   border-radius: 3px;
+   position: absolute;
+   top: 10px;
+   left: 14px;
+}
+section.product_part .product .p .discount p {
+   color: #fff;
+   font-weight: 600;
+   text-shadow: 1px 1px rgba(0,0,0,0.4);
+   
+}
+section.product_part .product .p img {
+   width: 100%;
+   height: 270px;
+   margin: 0 auto;
+   display: block;
+   object-fit: contain;
+}
+section.product_part .product .p h6 {
+   font-size: 15px;
+   text-align: center;
+   margin-top: 10px;
+}
+section.product_part .product .p p {
+   font-size: 13px;
+   text-align: center;
+   margin: 3px 0px;
+}
+section.product_part .product .p p.holud {
+   color: var(--c2);
+   font-weight: 600;
+   text-shadow: 1px 1px rgba(0,0,0,0.1);
+}
+
+section.product_part .product .p p.natok {
+   font-size: 12px;
+   margin-top: 11px;
+   font-weight: 600;
+   color: #666;
+   visibility: hidden;
+   opacity: 0;
+   transition: 0.4s;
+  
+}
+section.product_part .product .p:hover p.natok{
+   visibility: visible;
+   opacity: 1;
+  
+}
+ 
+/* ================= Buy ================== */
+section.buy{
+   padding-bottom: 50px;
+}
+section.buy h3 {
+   text-align: center;
+   font-size: 32px;
+   margin-bottom: 3%;
+}
+
+section.buy .items{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+section.buy .items .item {
+   width: 18%;
+}
+section.buy .items .item img{
+   width: 100%;
+   border-radius: 50%;
+}
+
+section.buy .items .item {
+   text-align: center;
+}
+section.buy .items .item h5 {
+   font-size: 18px;
+   font-weight: 500;
+   margin-bottom: 26px;
+}
+
+/* ================ Footer ================== */
+
+footer {
+   background: var(--c1);
+}
+footer .footer_part {
+   display: flex;
+   justify-content: space-around;
+   padding: 30px 0px;
+}
+footer .footer_part .a h4{
+   font-size: 22px;
+   color: var(--c2);
+}
+footer .footer_part .a h6 {
+   font-size: 16px;
+   margin-bottom: 10px;
+   color: #fff;
+}
+footer .footer_part .a ul{
+   list-style-type: none;
+}
+footer .footer_part .a ul li {
+   margin-bottom: 8px;
+}
+footer .footer_part .a ul li a {
+   text-decoration: none;
+   color: #111;
+   font-size: 13px;
+   font-weight: 500;
+   color: #bbb;
+   transition: 0.3s;
+}
+footer .footer_part .a ul li a:hover{
+   color: #fff;
+}
+footer .footer_part .a ul li a i{
+   font-size: 24px;
+   color: dodgerblue;
+}
+
+footer p.footer_p {
+   color: #fff;
+   text-align: center;
+   font-size: 11px;
+   padding: 20px 0px;
+   border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+section.about_part {
+   height: 53.3vh;
+   padding-top: 79px;
+}
+section.about_part p{
+   text-align: center;
+}
+section.about_part h3 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 3%;
+}
+/* ==================================== cck ========================================= */
+
+/* ============== check =============== */
+
+section.check {
+   text-align: center;
+   padding-top: 20px;
+   padding-bottom: 0px;
+}
+section.check2 {
+  
+   margin: 70px 0px;
+}
+section.check h1 {
+   font-size: 24px;
+   font-weight: 600;
+   padding: 10px 0px;
+}
+section.check p {
+   margin: 15px 0px;
+   font-size: 18px;
+}
+section.check p#demo {
+   font-size: 18px;
+   margin: 30px 0px 20px;
+   position: relative;
+   display: inline-block;
+}
+section.check form input {
+    width: 25%;
+    padding: 10px 10px;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+section.check p#demo img {
+   width: 60px;
+   position: absolute;
+   top: -17px;
+   right: -70px;
+}
+section.check form button {
+   border: none;
+   padding: 10px 20px;
+   background-color: dodgerblue;
+   color: #fff;
+   font-weight: 500;
+   transition: 0.3s;
+   border-radius: 10px;
+   font-size: 16px;
+   font-family: var(--f1);
+   cursor: pointer;
+}
+section.check form button:hover{
+   background-color: green;
+}
+section.check img{
+   width: 120px;
+}
+
+/* ====================== */
+
+.fa-chevron-up {
+   width: 60px;
+   height: 60px;
+   background-color: #edf4f9;
+   border: 3px solid #fff;
+   color: #5f24ef;
+   text-align: center;
+   line-height: 55px;
+   border-radius: 50%;
+   position: fixed;
+   bottom: 0px;
+   right: 200px;
+   z-index: 1000;
+   -webkit-transition: 0.4s;
+   transition: 0.4s;
+   opacity: 0;
+}
+.arrowUp {
+   opacity: 1;
+   bottom: 60px;
+}
+   
+ 

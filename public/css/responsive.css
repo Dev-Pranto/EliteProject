@@ -1,0 +1,921 @@
+ /* ================ 220px to 575px  xl ================ */
+ @media (min-width:0px) and (max-width:575px){
+    .fa-chevron-up {
+        width: 45px;
+        height: 45px;
+        line-height: 39px;
+        right: 3px;
+    }
+    section.check .container{
+        width: 90%;
+    }
+    section.check {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin-top: -60px;
+    }
+    section.check2{
+        margin-top: 60px;
+    }
+    section.check h1 {
+        font-size: 19px;
+    }
+    section.check p {
+        font-size: 15px;
+    }
+    section.check form input {
+        width: 40%;
+        font-size: 13px;
+    }
+    section.check form button {
+        font-size: 13px;
+    }
+    section.check p#demo {
+        font-size: 15px;
+        margin-bottom: 80px;
+    }
+    section.check form input.numb {
+        font-size: 15px;
+    }
+    section.check p#demo img {
+        width: 47px;
+        position: absolute;
+        top: -12px;
+        right: -52px;
+    }
+
+
+
+    /* =========================== */
+    section.about_part {
+        height: 60.3vh;
+        padding-top: 93px;
+    }
+    section.about_part h3{
+        font-size: 24px;
+    }
+    section.about_part .container{
+        width: 100%;
+    }
+
+    section.about_part p {
+        text-align: center;
+        font-size: 13px;
+        padding: 0px 30px;
+    }
+    header {
+         
+        position: relative;
+    }
+    header .left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+     
+    header .right {
+        position: absolute;
+        bottom: -64px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    header .right form .dropdown p {
+        display: none;
+    }
+    header .right form .dropdown {
+        display: none;
+    }
+    header .right form input {
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 13px;
+    }
+    header .right form button i {
+        font-size: 15px;
+    }
+    header .left h4 {
+        font-size: 17px;
+    }
+    header .right form button {
+        width: 50px;
+        
+    }
+
+
+    /* ==================== Nav ====================== */
+    nav {
+        border: 0px
+    }
+    nav .container{
+        margin: 0px 0px;
+        width: 100%;
+    }
+    nav .left {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        position: fixed;
+        top: 0;
+        left: -90%;
+        box-shadow: 0px 1px 20px rgba(0,0,0,0.0);
+        transition: 0.5s;
+        z-index: 999;
+    }
+    nav .left  ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        margin: 45px 0px 0px 20px;
+    }
+    nav .left ul .fa-times{
+       
+            position: absolute;
+            right: 23px;
+            top: 25px;
+            font-size: 19px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #222;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+         
+    }
+    nav .left  ul li {
+        padding: 10px 2px 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    nav  .right {
+        position: absolute;
+        top: 24px;
+        right: 15px;
+    }
+    nav  .right i {
+        color: #fff;
+    }
+    nav .fa-times{
+        display: block;
+     }
+     
+     nav .fa-bars {
+        font-size: 18px;
+        position: absolute;
+        top: 27px;
+        left: 8%;
+        color: #FFE;
+        display: block;
+        cursor: pointer;
+    }
+
+    /* ================ Banner ================= */
+    section.banner_part .container{
+        width: 90%;
+    }
+    section.banner_part .banner img {
+        height: auto;
+    }
+    section.banner_part .banner {
+        margin-top: 55px;
+        height: 203px;
+    }
+
+    /* ================== Product =========================== */
+    section.product_part {
+        margin-top: -45px;
+    }
+    section#product_part2 {
+        margin-top: 80px;
+    }
+    section.product_part2 {
+        margin-top: 100px;
+    }
+    
+    section.product_part h3 {
+        font-size: 24px;
+    }
+    section.product_part hr {
+        margin-bottom: 30px;
+        width: 40%;
+        margin: 0 auto 20px;
+        margin-top: 40px;
+    }
+    section.product_part .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    section.product_part .product {
+        flex-wrap: wrap;
+    }
+    section.product_part .product .p {
+        width: 48%;
+        padding: 6px;
+    }
+    section.product_part .product .p h6 {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    section.product_part .product .p p.natok {
+        font-size: 10px;
+         
+    }
+
+    /* ================== */
+    section.product_part .product .p img {
+        height: 150px;
+        object-fit: contain;
+    }
+    /* ================== */
+
+
+
+    /* ===================== Buy ====================== */
+    
+    section.buy h3{
+        font-size: 24px;
+    }
+    section.buy .items {
+        flex-direction: column;
+    }
+    section.buy .container {
+        width: 90%;
+    }
+    section.buy .items .item {
+        width: 85%;
+    }
+    section.buy .items .item h5 {
+        font-size: 16px;
+        margin-bottom: 16px;
+        margin-top: 30px;
+    }
+
+    /* ===================== Footer ====================== */
+    footer .container{
+        width: 100%;
+        margin: 0px 0px;
+    }
+    footer .footer_part {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+    }
+
+    footer .footer_part .a {
+        text-align: center;
+        margin-bottom: 18px;
+    }
+    footer .footer_part .a h6 {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    footer .footer_part .a ul {
+        text-align: center;
+    }
+    footer .footer_part .a ul li {
+        margin-bottom: 0px;
+    }
+    footer .footer_part .a ul li a {
+        font-size: 12px;
+    }
+    footer p.footer_p {
+        font-size: 10px;
+        padding: 15px 5px;
+    }
+ 
+}
+@media (min-width:430px) and (max-width:575px){
+    section.product_part{
+        margin-top: 20px;
+    }
+    section.product_part2 {
+        margin-top: 100px;
+    }
+    section.check {
+        margin-top: -15px;
+    }
+    section.check2{
+        margin-top: 60px;
+    }
+}
+
+ /* ================ 576px to 767px  ml ================ */
+ @media (min-width:576px) and (max-width:767px){
+    .fa-chevron-up {
+        width: 45px;
+        height: 45px;
+        line-height: 40px;
+        right: 10px;
+        font-size: 19px;
+    }
+    section.check .container{
+        width: 90%;
+    }
+    section.check {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+    }
+    section.check2 {
+        margin-top: 65px;
+    }
+    section.check h1 {
+        font-size: 21px;
+    }
+    section.check p {
+        font-size: 15px;
+    }
+    section.check form input {
+        width: 40%;
+        font-size: 14px;
+    }
+    section.check form button {
+        font-size: 14px;
+    }
+    section.check p#demo {
+        font-size: 15px;
+        margin-bottom: 80px;
+    }
+    section.check form input.numb {
+        font-size: 15px;
+    }
+    section.check p#demo img {
+        width: 47px;
+        position: absolute;
+        top: -12px;
+        right: -52px;
+    }
+
+
+
+    /* =========================== */
+
+    section.about_part {
+        height: 40.3vh;
+        padding-top: 93px;
+    }
+   
+    section.about_part .container{
+        width: 100%;
+    }
+     section.about_part h3{
+        font-size: 24px;
+    }
+
+    section.about_part p {
+        text-align: center;
+        font-size: 14px;
+        padding: 0px 30px;
+    }
+    /* ==================== */
+    
+    header {
+         
+        position: relative;
+    }
+    header .left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+     
+    header .right {
+        position: absolute;
+        bottom: -64px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    header .right form .dropdown p {
+        display: none;
+    }
+    header .right form .dropdown {
+        display: none;
+    }
+    header .right form input {
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 13px;
+    }
+    header .right form button i {
+        font-size: 15px;
+    }
+    header .left h4 {
+        font-size: 18px;
+    }
+    header .right form button {
+        width: 50px;
+        
+    }
+
+
+    /* ==================== Nav ====================== */
+    nav {
+        border: 0px
+    }
+    nav .container{
+        margin: 0px 0px;
+        width: 100%;
+    }
+    nav .left {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        position: fixed;
+        top: 0;
+        left: -90%;
+        box-shadow: 0px 1px 20px rgba(0,0,0,0.0);
+        transition: 0.5s;
+        z-index: 999;
+    }
+    nav .left  ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        margin: 45px 0px 0px 20px;
+    }
+    nav .left ul .fa-times{
+       
+            position: absolute;
+            right: 23px;
+            top: 25px;
+            font-size: 19px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #222;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+         
+    }
+    nav .left  ul li {
+        padding: 10px 2px 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    nav  .right {
+        position: absolute;
+        top: 24px;
+        right: 15px;
+    }
+    nav  .right i {
+        color: #fff;
+    }
+    nav .fa-times{
+        display: block;
+     }
+     
+     nav .fa-bars {
+        font-size: 20px;
+        position: absolute;
+        top: 27px;
+        left: 8%;
+        color: #FFE;
+        display: block;
+        cursor: pointer;
+    }
+
+    /* ================ Banner ================= */
+    section.banner_part .container{
+        width: 90%;
+    }
+    section.banner_part .banner img {
+        height: 100%;
+        object-fit: contain;
+    }
+    section.banner_part .banner {
+        margin-top: 55px;
+        height: 216px;
+    }
+
+    /* ================== Product =========================== */
+    section.product_part {
+        margin-top: -42px;
+    }
+    section#product_part2 {
+        margin-top: 80px;
+    }
+     
+    section.product_part h3 {
+        font-size: 24px;
+    }
+    section.product_part hr {
+        margin-bottom: 30px;
+        width: 40%;
+        margin: 0 auto 30px;
+    }
+    section.product_part .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    section.product_part .product {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section.product_part .product .p {
+        width: 40%;
+        padding: 6px;
+    }
+    section.product_part .product .p h6 {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    section.product_part .product .p p.natok {
+        font-size: 10px;
+         
+    }
+
+
+    /* ===================== Buy ====================== */
+    
+    section.buy h3{
+        font-size: 24px;
+    }
+    section.buy .items {
+        flex-direction: column;
+    }
+    section.buy .container {
+        width: 90%;
+    }
+    section.buy .items .item {
+        width: 60%;
+    }
+    section.buy .items .item h5 {
+        font-size: 16px;
+        margin-bottom: 16px;
+        margin-top: 30px;
+    }
+
+    /* ===================== Footer ====================== */
+    footer .container{
+        width: 100%;
+        margin: 0px 0px;
+    }
+    footer .footer_part {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0px;
+    }
+    footer .footer_part .a h6 {
+        font-size: 14px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    footer .footer_part .a ul {
+        text-align: center;
+    }
+    footer .footer_part .a ul li {
+        margin-bottom: 0px;
+    }
+    footer p.footer_p {
+        font-size: 11px;
+        padding: 20px 5px;
+    }
+ 
+}
+/* ================ 768px to 991px  lg ================ */
+@media (min-width:768px) and (max-width:991px){
+    .fa-chevron-up {
+        width: 45px;
+        height: 45px;
+        line-height: 40px;
+        right: 10px;
+        font-size: 19px;
+    }
+    section.check .container{
+        width: 90%;
+    }
+    section.check {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+        margin-top: 10px;
+    }
+    section.check2 {
+        margin-top: 106px;
+        margin-bottom: 100px;
+    }
+    section.check h1 {
+        font-size: 24px;
+    }
+    section.check p {
+        font-size: 17px;
+    }
+    section.check form input {
+        width: 36%;
+    }
+    section.check form button {
+        font-size: 14px;
+    }
+    section.check p#demo {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+    section.check form input.numb {
+        font-size: 15px;
+    }
+    section.check p#demo img {
+        width: 47px;
+        position: absolute;
+        top: -12px;
+        right: -52px;
+    }
+
+
+
+    /* =========================== */
+
+    section.about_part {
+        height: 56.2vh;
+        padding-top: 93px;
+    }
+   
+    section.about_part .container{
+        width: 100%;
+    }
+     section.about_part h3{
+        font-size: 24px;
+    }
+
+
+    section.about_part p {
+        text-align: center;
+        font-size: 14px;
+        padding: 0px 30px;
+    }
+    /* ==================== */
+    
+    header {
+         
+        position: relative;
+    }
+    header .left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+     
+    header .right {
+        position: absolute;
+        bottom: -64px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    header .right form .dropdown p {
+        display: none;
+    }
+    header .right form .dropdown {
+        display: none;
+    }
+    header .right form input {
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 13px;
+    }
+    header .right form button i {
+        font-size: 15px;
+    }
+    header .left h4 {
+        font-size: 18px;
+    }
+    header .right form button {
+        width: 50px;
+        
+    }
+
+
+    /* ==================== Nav ====================== */
+    nav {
+        border: 0px
+    }
+    nav .container{
+        margin: 0px 0px;
+        width: 100%;
+    }
+    nav .left {
+        width: 50%;
+        height: 100%;
+        background: #ffff;
+        position: fixed;
+        top: 0;
+        left: -90%;
+        box-shadow: 0px 1px 20px rgba(0,0,0,0.0);
+        transition: 0.5s;
+        z-index: 999;
+    }
+    nav .left  ul {
+        display: flex;
+        list-style-type: none;
+        flex-direction: column;
+        margin: 45px 0px 0px 20px;
+    }
+    nav .left ul .fa-times{
+       
+            position: absolute;
+            right: 23px;
+            top: 25px;
+            font-size: 19px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #222;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+         
+    }
+    nav .left  ul li {
+        padding: 10px 2px 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    nav  .right {
+        position: absolute;
+        top: 24px;
+        right: 15px;
+    }
+    nav  .right i {
+        color: #fff;
+    }
+    nav .fa-times{
+        display: block;
+     }
+     
+     nav .fa-bars {
+        font-size: 20px;
+        position: absolute;
+        top: 27px;
+        left: 8%;
+        color: #FFE;
+        display: block;
+        cursor: pointer;
+    }
+
+    /* ================ Banner ================= */
+    section.banner_part .container{
+        width: 90%;
+    }
+    section.banner_part .banner img {
+        height: 100%;
+    }
+    section.banner_part .banner {
+        margin-top: 55px;
+        height: 335px;
+    }
+
+    /* ================== Product =========================== */
+    section.product_part {
+        margin-top: 25px;
+    }
+    section#product_part2 {
+        margin-top: 100px;
+    }
+    section.product_part h3 {
+        font-size: 24px;
+    }
+    section.product_part hr {
+        margin-bottom: 30px;
+        width: 40%;
+        margin: 0 auto 30px;
+    }
+    section.product_part .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    section.product_part .product {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    section.product_part .product .p {
+    width: 40%;
+    padding: 20px;
+}
+    section.product_part .product .p h6 {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    section.product_part .product .p p.natok {
+        font-size: 10px;
+         
+    }
+
+
+    /* ===================== Buy ====================== */
+    
+    section.buy h3{
+        font-size: 24px;
+    }
+    
+    section.buy .container {
+        width: 90%;
+    }
+    section.buy .items .item {
+        width: 18%;
+    }
+    section.buy .items .item h5 {
+        font-size: 13px;
+        margin-bottom: 16px;
+        margin-top: 30px;
+        font-weight: 600;
+    }
+
+    /* ===================== Footer ====================== */
+    footer .container{
+        width: 100%;
+        margin: 0px 0px;
+    }
+    footer .footer_part {
+        
+        padding: 20px 0px;
+    }
+    footer .footer_part .a h6 {
+        font-size: 14px;
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    footer .footer_part .a ul {
+        text-align: center;
+    }
+    footer .footer_part .a ul li {
+        margin-bottom: 0px;
+    }
+    footer p.footer_p {
+        font-size: 11px;
+        padding: 20px 5px;
+    }
+    footer .footer_part .a h4 {
+        font-size: 22px;
+        color: var(--c2);
+        margin-top: 31%;
+    }
+ 
+}
+/* ================ 992px to 1199px  lg ================ */
+
+@media (min-width:992px) and (max-width:1530px){
+    .fa-chevron-up {
+        width: 45px;
+        height: 45px;
+        line-height: 40px;
+        right: 10px;
+        font-size: 19px;
+    }
+
+    section.check2 {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        margin-top: 45px;
+        margin-bottom: 57px;
+    }
+    .container {
+        width: 85%;
+    }
+    header .left {
+        width: 28%;
+    }
+    header .left h4 {
+        color: #fff;
+        font-size: 21px;
+    }
+    header .right {
+        width: 70%;
+    }
+    header .right form input {
+       
+        font-size: 15px;
+    }
+    header .right form .dropdown p {
+        font-weight: 600;
+        font-size: 11px;
+    }
+    header .right form .dropdown p {
+    margin-top: 6px;
+}
+header .right form .dropdown {
+    
+    padding: 1.1% 8px;
+    
+  }
+  header .right form button i {
+    font-size: 16px;
+ }
+ header .right form .dropdown ul li a {
+    font-size: 12px;
+ }
+ section.banner_part .banner {
+    height: 430px;
+}
+nav .left  ul li a {
+    font-size: 14px;
+}
+
+}
+
+
+ 
+   
+        
+ 
