@@ -44,16 +44,16 @@ app.post('/verify', (req, res) => {
   const found = codes.find(c => c.code === userCode);
 
   if (!found) {
-    return res.render('index', { result: '❌ আপনার কোডটি ভুল বা ভুয়া।' });
+    return res.render('index', { result: '❌ আপনার পণ্য টি নকল !' });
   }
 
   if (found.used) {
-    return res.render('index', { result: '✅ এই কোডটি বৈধ, প্রোডাক্টটি আসল।' });
+    return res.render('index', { result: '✅ আপনার পণ্য টি অরজিনাল !' });
   }
 
   found.used = true;
   saveCodes();
-  res.render('index', { result: '✅ এই কোডটি বৈধ, প্রোডাক্টটি আসল।' });
+  res.render('index', { result: '✅ আপনার পণ্য টি অরজিনাল !' });
 });
 
 app.use('/admin', basicAuth({
@@ -83,7 +83,7 @@ app.post('/generate', (req, res) => {
   res.redirect('/admin');
 });
 
- 
+
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
@@ -125,6 +125,3 @@ app.get('/product', (req, res) => {
 app.get('/au', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'au.html'));
 });
-
- 
- 
