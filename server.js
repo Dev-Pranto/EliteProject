@@ -48,7 +48,7 @@ app.post('/verify', (req, res) => {
   }
 
   if (found.used) {
-    return res.render('index', { result: '⚠️ এই কোডটি ইতিমধ্যে ব্যবহৃত হয়েছে।' });
+    return res.render('index', { result: '✅ এই কোডটি বৈধ, প্রোডাক্টটি আসল।' });
   }
 
   found.used = true;
