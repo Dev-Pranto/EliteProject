@@ -1,664 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <title>Elite Corporation</title>
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <style>
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 30px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            animation: modalpop 0.4s;
-            position: relative;
-        }
-
-        @keyframes modalpop {
-            from {opacity: 0; transform: translateY(-50px);}
-            to {opacity: 1; transform: translateY(0);}
-        }
-
-        .close {
-            color: #aaa;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .close:hover {
-            color: black;
-        }
-
-        .modal-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-        }
-
-        .success-icon {
-            color: #28a745;
-        }
-
-        .error-icon {
-            color: #dc3545;
-        }
-
-        .modal-message {
-            font-size: 22px;
-            margin-bottom: 25px;
-            font-weight: 500;
-            line-height: 1.4;
-        }
-
-        .modal-button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 18px;
-            margin: 10px 2px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .modal-button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
- <!-- ==================== Header ========================= -->
-
- <header id="header">
-  <div class="container">
-    <div class="left">
-      <h4>ELITE-CORPORATION</h4>
-    </div>
-    <div class="right">
-      <form action="">
-      <input type="text" placeholder="Search for Products">
-      <div class="dropdown">
-        <p>Select Category
-          <ul>
-            <li><a href="">Green Coffee</a></li>
-            <li><a href="">Weight Gain</a></li>
-            <li><a href="">Love Forever</a></li>
-          </ul>
-        </p>
-
-      </div>
-      <button type="submit">
-        <i class="fas fa-search"></i>
-      </button>
-    </form>
-
-    </div>
-  </div>
- </header>
-
- <!-- ==================== Nav ========================= -->
-
- <nav>
-  <div class="container">
-    <div class="left" id="navLinks">
-      <ul>
-        <i class="fas fa-times" onclick="hideMenu()"></i>
-        <li><a href="#header" id="first">Home</a></li>
-        <li><a href="#product">Products</a></li>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#checkID">Authentication</a></li>
-      </ul>
-    </div>
-    <i class="fas fa-bars" onclick="showMenu()"></i>
-
-    <div class="right">
-      <i class="fab fa-facebook"></i>
-    </div>
-  </div>
- </nav>
-
-
- <!-- ======================== Banner ========================= -->
-
- <section class="banner_part">
-  <div class="container">
-    <div class="banner_slider">
-      <div class="banner one">
-        <img src="./img/banner1.png" alt="">
-      </div>
-      <div class="banner two">
-        <img src="./img/banner2.png" alt="">
-
-      </div>
-      <div class="banner three">
-        <img src="./img/banner3.png" alt="">
-
-      </div>
-    </div>
-  </div>
- </section>
- <a href="#header">
-  <i class="fas fa-chevron-up"></i>
- </a>
-
-
-<!-- Verification Section -->
-<section class="check check2" id="checkID">
-    <div class="container">
-        <h1>আপনার প্রোডাক্টটি অরিজিনাল কিনা চেক করুন</h1>
-        <p>আপনার হাতে থাকা প্রোডাক্টটির পিছনে দেয়া<br>
-        ৮ ডিজিটের সিকিউরিটি কোডটি এখানে লিখুন।</p>
-
-        <form id="verifyForm" action="/verify" method="POST">
-            <input type="text" name="code" placeholder="৮ ডিজিটের কোড লিখুন" required /> <br><br>
-            <button type="submit" class="submit">যাচাই করুন</button>
-        </form>
-
-        <p id="demo" style="color:red;font-weight: 600;">বিঃ দ্রঃ কোডটি শুধু মাত্র একবারই ব্যবহার করতে পারবেন,<br>
-            কোডটি পূর্বে ব্যবহৃত হয়ে গেলে তা মেয়াদ উত্তীর্ণ দেখাবে。
-        </p>
-    </div>
-</section>
-    <!-- ========== -->
-
-<!-- Verification Result Modal -->
-<div id="resultModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <div id="modalIcon" class="modal-icon"></div>
-        <p id="modalMessage" class="modal-message"></p>
-        <button class="modal-button" onclick="closeModal()">ঠিক আছে</button>
-    </div>
-</div>
-
-
- <!-- ======================== Our Product ========================= -->
-
- <section class="product_part" id="product">
-  <div class="container">
-    <h3>Our Products</h3>
-    <hr>
-    <div class="product">
-
-      <div class="p">
-        <img src="./img/product1.jpg" alt="">
-        <h6>Milk Shake (মিল্ক শেক)</h6>
-        <p>Supplement</p>
-        <p class="holud">990 ৳</p>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/product2.jpg" alt="">
-      <h6>Natural Food Badam Shake
-      </h6>
-      <p>Supplement</p>
-      <p class="holud">1200৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-    </div>
-    <div class="p">
-      <img src="./img/product3.jpg" alt="">
-      <h6>Milk Shake (মিল্ক শেক)</h6>
-      <p>Supplement</p>
-      <p class="holud">1200 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-20%</p>
-      </div>
-
-    </div>
-    <div class="p">
-      <img src="./img/beauty-pearl.jpg" alt="">
-      <h6>Beauty Pearl (Total Beauty Solution)</h6>
-      <p>Beauty & Cosmetics Supplement</p>
-      <p class="holud">1,450 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-27%</p>
-      </div>
-
-    </div>
-
-
-    </div>
-
-
-    <div class="product">
-
-      <div class="p">
-        <img src="./img/product5.jpg" alt="">
-        <h6>Vita Protein</h6>
-        <p>Supplement</p>
-        <p class="holud">1200 ৳</p>
-        <div class="discount">
-          <p>-19%</p>
-        </div>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/product.png" alt="">
-      <h6>Keto Green Coffee</h6>
-      <p>Supplement</p>
-      <p class="holud">1200 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-    </div>
-    <div class="p">
-      <img src="./img/product0.jpg" alt="">
-      <h6>Natural Health Supplements</h6>
-      <p>Supplement</p>
-      <p class="holud">1200 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-    <div class="p">
-      <img src="./img/product8.jpg" alt="">
-      <h6>Nano Slimming Juice</h6>
-      <p>Supplement</p>
-      <p class="holud">1400 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-
-
-    </div>
-
-    <div class="product">
-
-      <div class="p">
-        <img src="./img/product9.jpg" alt="">
-        <h6>Badam Shake</h6>
-        <p>Supplement</p>
-        <p class="holud">1200 ৳</p>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/p10.jpeg" alt="">
-      <h6>Hight Develop Supplement</h6>
-      <p>Supplement</p>
-      <p class="holud">1600.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-    </div>
-    <div class="p">
-      <img src="./img/product10.jpg" alt="">
-      <h6>Lemon Juice(লেমন জুস)</h6>
-      <p>Supplement</p>
-      <p class="holud">1250</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-21%</p>
-      </div>
-
-    </div>
-    <div class="p">
-      <img src="./img/product11.jpg" alt="">
-      <h6>Chocolate Shake (চকলেট শেক)</h6>
-      <p>Supplement</p>
-      <p class="holud">1000 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-
-
-    </div>
-
-     <div class="product">
-
-      <div class="p">
-        <img src="./img/product13.jpg" alt="">
-        <h6>Premium Nutrition</h6>
-        <p>Supplement</p>
-        <p class="holud">1400 ৳</p>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/p14.jpg" alt="">
-      <h6>Piles Cure</h6>
-      <p>Supplement</p>
-      <p class="holud">1500.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-    </div>
-    <div class="p">
-      <img src="./img/p15.jpeg" alt="">
-      <h6>Saffron Coffe</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-    <div class="p">
-      <img src="./img/p16.jpg" alt="">
-      <h6>Saffron Love Forever (Power Source)</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-
-
-    </div>
-
-     <div class="product">
-
-      <div class="p">
-        <img src="./img/p17.jpg" alt="">
-        <h6>Saffron Time Develop (Love Forever)</h6>
-        <p>Supplement</p>
-        <p class="holud">1,990.00 ৳</p>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/p18.jpeg" alt="">
-      <h6>Weight Gain</h6>
-      <p>Supplement</p>
-      <p class="holud">3,900.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-25%</p>
-      </div>
-
-    </div>
-    <div class="p">
-      <img src="./img/p19.jpeg" alt="">
-      <h6>Weight Gain Fitness Growth Supplement</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-    <div class="p">
-      <img src="./img/p20.jpg" alt="">
-      <h6>Weight Gain Milk Shake Supplement</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-
-
-    </div>
-
-
-    <div class="product">
-
-      <div class="p">
-        <img src="./img/p21.jpeg" alt="">
-        <h6>Weight Gain Premium Nutrition Supplement</h6>
-        <p>Supplement</p>
-        <p class="holud">1,990.00 ৳</p>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/p22.jpg" alt="">
-      <h6>Weight Loss (Get Slim Stay Slim)</h6>
-      <p>Supplement</p>
-      <p class="holud">3,400.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-    </div>
-    <div class="p">
-      <img src="./img/p23.jpg" alt="">
-      <h6>Weight Loss (Get Slim Stay Slim)</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-
-    </div>
-    <div class="p">
-      <img src="./img/p24.jpg" alt="">
-      <h6>Weight Loss Daily Loss Slimming Powder</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-25%</p>
-      </div>
-
-    </div>
-
-
-    </div>
-
-
-     <div class="product">
-
-      <div class="p">
-        <img src="./img/p25.jpg" alt="">
-        <h6>Weight Loss Natural Slimming</h6>
-        <p>Supplement</p>
-        <p class="holud">1,500.00 ৳</p>
-        <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-      </div>
-
-    <div class="p">
-      <img src="./img/p26.jpg" alt="">
-      <h6>Women’s V Tight</h6>
-      <p>Supplement</p>
-      <p class="holud">2800.00 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-
-    </div>
-    <div class="p">
-      <img src="./img/p27.jpg" alt="">
-      <h6>Zero Pain</h6>
-      <p>Supplement</p>
-      <p class="holud">1,990 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-25%</p>
-      </div>
-
-    </div>
-    <div class="p">
-      <img src="./img/product2.jpg" alt="">
-      <h6>Natural Food Badam Shake</h6>
-      <p>Supplement</p>
-      <p class="holud">1200 ৳</p>
-      <p class="natok">কোনো পার্শ্বপ্রতিক্রিয়া নাই। এটি (BCSIR) ল্যাব থেকে পরিক্ষিত এবং অনুমোদিত।</p>
-      <div class="discount">
-        <p>-25%</p>
-      </div>
-
-    </div>
-
-
-    </div>
-  </div>
-  <hr>
- </section>
-
-<section class="about_part" id="about">
-  <div class="container">
-    <h3>About Us</h3>
-    <p>We are your one-stop destination for all your health needs. Discover a wide range of high-quality supplements carefully curated to enhance your well-being. Our website offers a diverse selection designed to help you feel your best. With our user-friendly interface and secure shopping experience, you can explore, compare, and conveniently purchase your favorite health supplements from the comfort of your home. Embrace self-care and unlock better health with Elitecorporation.top.</p>
-  </div>
-</section>
-
-
-
-
- <!-- ======================== Footer ========================= -->
-
- <footer>
-  <div class="container">
-    <div class="footer_part">
-      <div class="a">
-        <h4>Elite Corporation</h4>
-      </div>
-      <div class="a">
-        <h6>Important Pages</h6>
-        <ul>
-          <li><a href="">Privacy Policy</a></li>
-          <li><a href="">Terms & Conditions</a></li>
-          <li><a href="">Return Policy</a></li>
-        </ul>
-      </div>
-      <div class="a">
-        <h6>Quick Links</h6>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="a">
-        <h6>Social Links</h6>
-        <ul>
-          <li><a href="">
-            <i class="fab fa-facebook"></i>
-          </a></li>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <p class="footer_p">
-    Elitcorporationbd  2023 CREATED BY Systemeye Technologies Ltd. PREMIUM DIGITAL MARKETING SOLUTIONS.
-  </p>
-
-
- </footer>
-
-
-    <!-- =========================== Script =========================== -->
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script>
-        // Get the modal
-        var modal = document.getElementById("resultModal");
-        var span = document.getElementsByClassName("close")[0];
-
-        // Close modal functions
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        function closeModal() {
-            modal.style.display = "none";
-        }
-
-        // Function to show modal with message
-        function showModal(message, isSuccess) {
-            var icon = document.getElementById("modalIcon");
-            var msg = document.getElementById("modalMessage");
-
-            if (isSuccess) {
-                icon.className = "modal-icon success-icon";
-                icon.innerHTML = '<i class="fas fa-check-circle"></i>';
-            } else {
-                icon.className = "modal-icon error-icon";
-                icon.innerHTML = '<i class="fas fa-times-circle"></i>';
-            }
-
-            msg.textContent = message;
-            modal.style.display = "block";
-        }
-
-        // Handle form submission with AJAX
-        $(document).ready(function() {
-            $('#verifyForm').on('submit', function(e) {
-                e.preventDefault();
-
-                // Get the code value
-                var code = $('input[name="code"]').val();
-
-                // Simple validation
-                if (!code || code.length !== 8) {
-                    showModal('দয়া করে ৮ ডিজিটের একটি বৈধ কোড লিখুন', false);
-                    return;
-                }
-
-                // Show loading state
-                $('.submit').text('যাচাই করা হচ্ছে...').prop('disabled', true);
-
-                $.ajax({
-                    type: 'POST',
-                    url: '/verify',
-                    data: { code: code },
-                    success: function(response) {
-                        // Reset button
-                        $('.submit').text('যাচাই করুন').prop('disabled', false);
-
-                        // Show the result in modal
-                        showModal(response.message, response.success);
-                    },
-                    error: function(xhr, status, error) {
-                        // Reset button
-                        $('.submit').text('যাচাই করুন').prop('disabled', false);
-
-                        console.error("AJAX Error:", status, error);
-                        showModal('দুঃখিত, একটি ত্রুটি occurred. পরে আবার চেষ্টা করুন।', false);
-                    }
-                });
-            });
-        });
-    </script>
-
-</body>
-</html>
+const basicAuth = require('express-basic-auth');
+require('dotenv').config(); // যেন .env ফাইল কাজ করে
+
+// -----------------
+const express = require('express');
+const bodyParser = require('body-parser');
+const fs = require('fs');
+const path = require('path');
+require('dotenv').config();
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// EJS setup
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
+// Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// ✅ Show index.ejs at root route (must be before static)
+app.get('/', (req, res) => {
+  res.render('index', { result: null });
+});
+
+// Static files (CSS, JS, Images)
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Codes file handling
+const codesFilePath = path.join(__dirname, 'codes.json');
+let codes = [];
+
+if (fs.existsSync(codesFilePath)) {
+  codes = JSON.parse(fs.readFileSync(codesFilePath));
+}
+
+function saveCodes() {
+  fs.writeFileSync(codesFilePath, JSON.stringify(codes, null, 2));
+}
+
+// Verify code
+// Verify code - simplified approach
+app.post('/verify', (req, res) => {
+    const userCode = req.body.code;
+    const found = codes.find(c => c.code === userCode);
+
+    // Always return JSON for the verify endpoint
+    if (!found) {
+      return res.json({
+        message: 'আপনার পণ্য টি নকল !',
+        success: false
+      });
+    }
+
+    if (found.used) {
+      return res.json({
+        message: 'আপনার পণ্য টি অরজিনাল !',
+        success: true
+      });
+    }
+
+    found.used = true;
+    saveCodes();
+
+    return res.json({
+      message: '✅ আপনার পণ্য টি অরজিনাল !',
+      success: true
+    });
+  });
+app.use('/admin', basicAuth({
+  users: { [process.env.ADMIN_USER]: process.env.ADMIN_PASS },
+  challenge: true
+}));
+
+// ----------------------------
+// Admin panel
+app.get('/admin', (req, res) => {
+  res.render('admin', { codes });
+});
+app.get('/admin', (req, res) => {
+  res.send('Welcome to the Admin Panel 🔐');
+});
+
+app.post('/generate', (req, res) => {
+  const password = req.body.password;
+  if (password !== '661996') return res.send('ভুল পাসওয়ার্ড!');
+
+  const count = parseInt(req.body.count);
+  for (let i = 0; i < count; i++) {
+    const newCode = Math.floor(10000000 + Math.random() * 90000000).toString();
+    codes.push({ code: newCode, used: false });
+  }
+  saveCodes();
+  res.redirect('/admin');
+});
+
+
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+});
+// Export codes
+const exportRouter = require('./routes/export');
+app.use('/export', exportRouter);
+
+app.get('/export', (req, res) => {
+  let exportText = 'Generated Codes:\n\n';
+  codes.forEach(c => {
+    exportText += `${c.code} - ${c.used ? 'USED' : 'UNUSED'}\n`;
+  });
+
+  res.setHeader('Content-disposition', 'attachment; filename=codes.txt');
+  res.setHeader('Content-Type', 'text/plain');
+  res.send(exportText);
+});
+
+// Delete codes
+app.post('/delete-old-codes', (req, res) => {
+  const password = req.body.password;
+  if (password !== '661996') return res.send('❌ ভুল পাসওয়ার্ড! অনুমতি নেই।');
+
+  codes = [];
+  saveCodes();
+  res.send('✅ পুরাতন সব কোড মুছে ফেলা হয়েছে।');
+});
+
+// Other pages (static)
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
+app.get('/product', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'product.html'));
+});
+
+app.get('/au', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'au.html'));
+});
