@@ -39,23 +39,34 @@ function saveCodes() {
 }
 
 // Verify code
+// Verify code - simplified approach
 app.post('/verify', (req, res) => {
-  const userCode = req.body.code;
-  const found = codes.find(c => c.code === userCode);
+    const userCode = req.body.code;
+    const found = codes.find(c => c.code === userCode);
 
-  if (!found) {
-    return res.render('index', { result: '❌ আপনার পণ্য টি নকল !' });
-  }
+    // Always return JSON for the verify endpoint
+    if (!found) {
+      return res.json({
+        message: '❌ আপনার পণ্য টি নকল !',
+        success: false
+      });
+    }
 
-  if (found.used) {
-    return res.render('index', { result: '✅ আপনার পণ্য টি অরজিনাল !' });
-  }
+    if (found.used) {
+      return res.json({
+        message: '✅ আপনার পণ্য টি অরজিনাল !',
+        success: true
+      });
+    }
 
-  found.used = true;
-  saveCodes();
-  res.render('index', { result: '✅ আপনার পণ্য টি অরজিনাল !' });
-});
+    found.used = true;
+    saveCodes();
 
+    return res.json({
+      message: '✅ আপনার পণ্য টি অরজিনাল !',
+      success: true
+    });
+  });
 app.use('/admin', basicAuth({
   users: { [process.env.ADMIN_USER]: process.env.ADMIN_PASS },
   challenge: true
